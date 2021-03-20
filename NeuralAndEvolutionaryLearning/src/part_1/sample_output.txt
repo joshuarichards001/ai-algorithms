@@ -1,0 +1,14 @@
+"C:\Program Files (x86)\python\python-3.8.3\python.exe" "C:/Users/joshu/Google Drive/Uni/2020/COMP307/A2/NeuralAndEvolutionaryLearning/src/part_1/perceptron_for_classification.py"
+Actual Class: 0 Predicted Class: 0
+Actual Class: 1 Predicted Class: 1
+Actual Class: 1 Predicted Class: 1
+Actual Class: 0 Predicted Class: 0
+Actual Class: 0 Predicted Class: 0
+Actual Class: 1 Predicted Class: 1
+Actual Class: 1 Predicted Class: 1
+Actual Class: 0 Predicted Class: 0
+
+Wins:  8 Total:  8
+100.0 %  is the percentage classified correctly
+
+Process finished with exit code 0

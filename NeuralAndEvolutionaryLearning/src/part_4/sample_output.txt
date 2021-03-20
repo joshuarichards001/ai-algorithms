@@ -1,0 +1,4 @@
+"C:\Program Files (x86)\python\python-3.8.3\python.exe" "C:/Users/joshu/Google Drive/Uni/2020/COMP307/A2/NeuralAndEvolutionaryLearning/src/part_4/genetic_program_for_classification.py"
+Accuracy: 0.9524122807017544 Program: div(V18, V8)
+
+Process finished with exit code 0

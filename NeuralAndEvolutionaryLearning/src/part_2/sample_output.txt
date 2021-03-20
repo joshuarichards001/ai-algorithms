@@ -1,0 +1,13 @@
+"C:\Program Files (x86)\python\python-3.8.3\python.exe" "C:/Users/joshu/Google Drive/Uni/2020/COMP307/A2/NeuralAndEvolutionaryLearning/src/part_2/neural_net_for_classification.py"
+              precision    recall  f1-score   support
+
+           1       0.94      1.00      0.97        30
+           2       1.00      0.91      0.96        35
+           3       0.96      1.00      0.98        24
+
+    accuracy                           0.97        89
+   macro avg       0.97      0.97      0.97        89
+weighted avg       0.97      0.97      0.97        89
+
+
+Process finished with exit code 0

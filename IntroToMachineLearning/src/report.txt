@@ -1,0 +1,273 @@
+PART 1
+Question 1:
+-----------
+python k_nearest_neighbour.py data\wine-training data\wine-test
+Input the K value desired: 1
+For K=1
+Wine: 0, Actual Class: 3, Predicted Class: 3
+Wine: 1, Actual Class: 3, Predicted Class: 3
+Wine: 2, Actual Class: 3, Predicted Class: 3
+Wine: 3, Actual Class: 1, Predicted Class: 1
+Wine: 4, Actual Class: 1, Predicted Class: 1
+Wine: 5, Actual Class: 1, Predicted Class: 1
+Wine: 6, Actual Class: 2, Predicted Class: 1
+Wine: 7, Actual Class: 2, Predicted Class: 2
+Wine: 8, Actual Class: 1, Predicted Class: 1
+Wine: 9, Actual Class: 2, Predicted Class: 2
+Wine: 10, Actual Class: 2, Predicted Class: 2
+Wine: 11, Actual Class: 2, Predicted Class: 3
+Wine: 12, Actual Class: 3, Predicted Class: 3
+Wine: 13, Actual Class: 3, Predicted Class: 3
+Wine: 14, Actual Class: 1, Predicted Class: 1
+Wine: 15, Actual Class: 2, Predicted Class: 2
+Wine: 16, Actual Class: 3, Predicted Class: 3
+Wine: 17, Actual Class: 3, Predicted Class: 3
+Wine: 18, Actual Class: 1, Predicted Class: 1
+Wine: 19, Actual Class: 1, Predicted Class: 1
+Wine: 20, Actual Class: 3, Predicted Class: 3
+Wine: 21, Actual Class: 2, Predicted Class: 2
+Wine: 22, Actual Class: 2, Predicted Class: 2
+Wine: 23, Actual Class: 3, Predicted Class: 3
+Wine: 24, Actual Class: 2, Predicted Class: 2
+Wine: 25, Actual Class: 2, Predicted Class: 3
+Wine: 26, Actual Class: 2, Predicted Class: 2
+Wine: 27, Actual Class: 3, Predicted Class: 3
+Wine: 28, Actual Class: 2, Predicted Class: 2
+Wine: 29, Actual Class: 1, Predicted Class: 1
+Wine: 30, Actual Class: 2, Predicted Class: 2
+Wine: 31, Actual Class: 1, Predicted Class: 1
+Wine: 32, Actual Class: 2, Predicted Class: 2
+Wine: 33, Actual Class: 1, Predicted Class: 1
+Wine: 34, Actual Class: 2, Predicted Class: 2
+Wine: 35, Actual Class: 2, Predicted Class: 2
+Wine: 36, Actual Class: 2, Predicted Class: 2
+Wine: 37, Actual Class: 2, Predicted Class: 2
+Wine: 38, Actual Class: 2, Predicted Class: 2
+Wine: 39, Actual Class: 1, Predicted Class: 1
+Wine: 40, Actual Class: 2, Predicted Class: 2
+Wine: 41, Actual Class: 2, Predicted Class: 2
+Wine: 42, Actual Class: 3, Predicted Class: 3
+Wine: 43, Actual Class: 1, Predicted Class: 1
+Wine: 44, Actual Class: 2, Predicted Class: 2
+Wine: 45, Actual Class: 1, Predicted Class: 1
+Wine: 46, Actual Class: 3, Predicted Class: 3
+Wine: 47, Actual Class: 2, Predicted Class: 2
+Wine: 48, Actual Class: 2, Predicted Class: 2
+Wine: 49, Actual Class: 1, Predicted Class: 1
+Wine: 50, Actual Class: 3, Predicted Class: 3
+Wine: 51, Actual Class: 1, Predicted Class: 1
+Wine: 52, Actual Class: 1, Predicted Class: 1
+Wine: 53, Actual Class: 3, Predicted Class: 3
+Wine: 54, Actual Class: 3, Predicted Class: 3
+Wine: 55, Actual Class: 1, Predicted Class: 1
+Wine: 56, Actual Class: 1, Predicted Class: 1
+Wine: 57, Actual Class: 3, Predicted Class: 3
+Wine: 58, Actual Class: 1, Predicted Class: 1
+Wine: 59, Actual Class: 3, Predicted Class: 3
+Wine: 60, Actual Class: 3, Predicted Class: 3
+Wine: 61, Actual Class: 2, Predicted Class: 1
+Wine: 62, Actual Class: 2, Predicted Class: 2
+Wine: 63, Actual Class: 3, Predicted Class: 3
+Wine: 64, Actual Class: 2, Predicted Class: 2
+Wine: 65, Actual Class: 3, Predicted Class: 3
+Wine: 66, Actual Class: 3, Predicted Class: 3
+Wine: 67, Actual Class: 1, Predicted Class: 1
+Wine: 68, Actual Class: 1, Predicted Class: 1
+Wine: 69, Actual Class: 2, Predicted Class: 2
+Wine: 70, Actual Class: 2, Predicted Class: 1
+Wine: 71, Actual Class: 3, Predicted Class: 3
+Wine: 72, Actual Class: 2, Predicted Class: 2
+Wine: 73, Actual Class: 2, Predicted Class: 2
+Wine: 74, Actual Class: 1, Predicted Class: 1
+Wine: 75, Actual Class: 1, Predicted Class: 1
+Wine: 76, Actual Class: 1, Predicted Class: 1
+Wine: 77, Actual Class: 3, Predicted Class: 3
+Wine: 78, Actual Class: 1, Predicted Class: 1
+Wine: 79, Actual Class: 1, Predicted Class: 1
+Wine: 80, Actual Class: 2, Predicted Class: 2
+Wine: 81, Actual Class: 2, Predicted Class: 2
+Wine: 82, Actual Class: 3, Predicted Class: 3
+Wine: 83, Actual Class: 1, Predicted Class: 1
+Wine: 84, Actual Class: 2, Predicted Class: 2
+Wine: 85, Actual Class: 1, Predicted Class: 1
+Wine: 86, Actual Class: 1, Predicted Class: 1
+Wine: 87, Actual Class: 2, Predicted Class: 2
+Wine: 88, Actual Class: 1, Predicted Class: 1
+Accuracy =  0.9438202247191011 (94.4%)
+
+
+Question 2:
+-----------
+Accuracy =  0.9550561797752809 (95.5%)
+
+The percentage for a k=1 is less than that of k=3
+
+This is because the class is determined from the most frequent class
+out of that items three nearest neighbors rather than its single
+nearest neighbor. This improves the accuracy because it accounts
+for situations where there is as outlier item very close to
+another item with a different class. k of 3 will notice this and
+ignore that single outlier piece of data.
+
+
+Question 3:
+-----------
+Advantages include
+- simple and easy to understand and implement making it a
+good introduction to the topic
+- immediately adapts to new training data as it is added
+and is quick to get going as there is no actual "training step"
+
+Disadvantages include
+- unknown what the ideal number for k should be meaning it is
+often unknown how to use the algorithm to its full potential
+- doesn't adjust well to imbalanced, outlier or missing data
+limiting the algorithms versatility
+
+
+Question 4:
+-----------
+1. divide both the test and training data into 5 equal parts
+2. first put the 1st set of test data in and 2nd-5th sets in of training
+data
+3. then put the 2nd set of test data in and the 1st and 3rd-5th sets
+of training data into the program
+4. continue on until the program has been run 5 times and all test parts
+have been compared to the training data and you have all of the classifications
+5. then average the results of those 5 processes and the output will be the
+desired classifications from that K-fold cross validation
+
+
+Question 5:
+-----------
+You would use the K-means clustering method with k = 3
+1. puts 3 centroids randomly on the plane
+2. for each point in the data find the nearest centroid (smallest euclidean
+distance) and then assign that point to that centroid
+3. for each cluster calculate a new centroid based on the mean of the
+points that are assigned to that cluster
+4. repeat 2 and 3 until nothing changes in the clusters assignments
+
+
+
+
+PART 2
+Question 1:
+-----------
+ASCITES  = True:
+     SPIDERS  = True:
+         VARICES  = True:
+             STEROID  = True:
+                 Class = live  , Prob = 1
+             STEROID  = False:
+                 SPLEENPALPABLE  = True:
+                     FIRMLIVER  = True:
+                         Class = live  , Prob = 1
+                     FIRMLIVER  = False:
+                         BIGLIVER  = True:
+                             SGOT  = True:
+                                 Class = live  , Prob = 1
+                             SGOT  = False:
+                                 FEMALE  = True:
+                                     Class = live  , Prob = 1
+                                 FEMALE  = False:
+                                     ANOREXIA  = True:
+                                         Class = die  , Prob = 1
+                                     ANOREXIA  = False:
+                                         Class = live  , Prob = 1
+                         BIGLIVER  = False:
+                             Class = live  , Prob = 1
+                 SPLEENPALPABLE  = False:
+                     ANOREXIA  = True:
+                         Class = live  , Prob = 1
+                     ANOREXIA  = False:
+                         Class = die  , Prob = 1
+         VARICES  = False:
+             Class = die  , Prob = 1
+     SPIDERS  = False:
+         FIRMLIVER  = True:
+             ANOREXIA  = True:
+                 SGOT  = True:
+                     Class = live  , Prob = 1
+                 SGOT  = False:
+                     Class = die  , Prob = 1
+             ANOREXIA  = False:
+                 Class = live  , Prob = 1
+         FIRMLIVER  = False:
+             SGOT  = True:
+                 BIGLIVER  = True:
+                     Class = live  , Prob = 1
+                 BIGLIVER  = False:
+                     Class = die  , Prob = 1
+             SGOT  = False:
+                 Class = live  , Prob = 1
+ ASCITES  = False:
+     BIGLIVER  = True:
+         VARICES  = True:
+             FIRMLIVER  = True:
+                 STEROID  = True:
+                     Class = die  , Prob = 1
+                 STEROID  = False:
+                     BILIRUBIN  = True:
+                         Class = live  , Prob = 1
+                     BILIRUBIN  = False:
+                         Class = die  , Prob = 1
+             FIRMLIVER  = False:
+                 Class = live  , Prob = 1
+         VARICES  = False:
+             Class = die  , Prob = 1
+     BIGLIVER  = False:
+         Class = live  , Prob = 1
+
+
+Algorithm Accuracy =  0.76
+Baseline Accuracy =  0.8125
+
+
+The baseline accuracy is actually higher than the algorithm accuracy.
+This is because the data set is highly imbalanced in favor of "Live" data
+
+Question 2:
+-----------
+0 accuracy = 0.87
+1 accuracy = 0.8
+2 accuracy = 0.67
+3 accuracy = 0.7
+4 accuracy = 0.8
+5 accuracy = 0.67
+6 accuracy = 0.8
+7 accuracy = 0.77
+8 accuracy = 0.67
+9 accuracy = 0.73
+
+Average = (0.87+0.8+0.67+0.7+0.8+0.67+0.8+0.77+0.67+0.73)/10 = 0.748
+
+Question 3:
+-----------
+a) "Any pair whose elimination yields a satisfactory (small) increase in impurity 
+is eliminated and the common parent node becomes the leaf node" (Lecture notes)
+
+There is pre pruning which is when you get to a certain branch and need to make the decision to 
+branch or not based on how much extra accuracy you will gain by doing so. If you get to a branch
+and it doesn't improve the accuracy by enough then you should "prune" that branch of the tree
+
+And there is also post pruning which is where you create the whole tree and then search through 
+it to figure out which branches are weak and don't need to be included. This method is more complex
+but can lead to more robust results.
+
+b) Because it makes the tree less specific to just that training set that is given
+to the algorithm (pruning avoids over fitting your tree) making it less accurate on that
+specific collection of data
+
+c) Because after pruning the tree it becomes more general (less specific to just the training data) and
+able to handle test data in a more dynamic and robust way
+
+
+Question 4:
+-----------
+As defined in the lecture material the impurity equation is done with a collection of elements that
+have 2 potential classes. This is because when the equation given is adjusted for 3 classes or more the output becomes
+incorrect. For example in a hypothetical situation we have 3 classes, class 1 had 10 elements, class 2 had 10 elements
+and class 3 has 0 elements, although this is an impure collection (as there isn't just one class present), because the
+total value is multiplied by the 0 from class 3 the final answer will be zero which should indicate that the collection
+is pure which is incorrect. This proves that with more than 2 classes the impurity equation given is invalid

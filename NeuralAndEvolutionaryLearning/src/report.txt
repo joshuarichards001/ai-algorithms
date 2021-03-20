@@ -1,0 +1,198 @@
+For all parts the given data was in the correct format
+
+PART 1
+Question 1:
+-----------
+8/8 after running 200 epochs
+100% accuracy
+
+Question 2:
+-----------
+Based on the given dataset I am getting perfect accuracy so there is no
+room for improvement.
+
+
+
+
+
+PART 2:
+Question 1:
+-----------
+Input Nodes - 13
+Output Nodes - 3
+Hidden Nodes - 100
+
+Each input node represents a different feature of the wine and these 13
+values are what we compute to get the class. The output nodes represent
+the 3 different classes that a wine can fall under. Finally the number
+of hidden nodes is a value that I came to the conclusion on after extensive
+testing to find the most effective value.
+
+Question 2:
+-----------
+Learning Rate - 0.001
+Momentum - 0.9
+Initial Weight Ranges - Implemented by scikit-learn (fan_in and fan_out are
+                        certain values within a layer)
+
+                        init_bound = np.sqrt(6. / (fan_in + fan_out))
+                        self._random_state.uniform(-init_bound, init_bound,
+                                           (fan_in, fan_out))
+
+After testing multiple options, these values proved to output the most accurate
+results.
+
+Question 3:
+-----------
+Training Termination Criteria - when the loss of score is not improving by at least
+                                1e-4 for 10 consecutive iterations or if 1000 iterations
+                                are run.
+
+After testing multiple options these criteria proved to output the most accurate
+results without over training.
+
+Question 4:
+-----------
+(0.99 + 0.97 + 0.98 + 0.98 + 0.97 + 0.96 + 0.97 + 0.97 + 0.98 + 0.96) / 10
+
+= 0.973 = 97.3% Accuracy Rate
+
+After analysis of multiple variations in parameters I believe that this is
+the highest mean value available with the given data sets and methods. With
+with only (on average) 2-3 wines being misclassified I believe the results
+are acceptable.
+
+Question 5:
+-----------
+With my k nearest neighbor implementation (with a k value of 3) I was able
+to achieve an accuracy of 95.5%. Although the distinction between these two
+methods from a performance standpoint isn't enormous, the roughly 2% increase
+using a perceptron method does give a noticeable improvement.
+
+
+
+
+
+PART 3:
+The reason I used gplearn as my library of choice for genetic programming
+is because of it's user friendly experience and simplistic design. It
+also follows the scikit-learn API which is a library I already have familiarity
+with, making gplearn easier to pick up.
+
+Question 1:
+-----------
+x, any number of random numbers
+
+Question 2:
+-----------
+add, subtract, multiply, divide
+
+Question 3:
+-----------
+The fitness function that was determined within gplearn provided excellent results
+by default so adjustment of this function was not necessary. The process they use to
+calculate there fitness function is with "mean absolute error" using this code:
+
+    np.average(np.abs(y_pred - y), weights=w)
+
+where it takes the average out of: the absolute value of the predicted y value subtracted
+from the y value, and the calculated weights.
+
+Question 4:
+-----------
+Stopping Criteria - 0.008
+Generations - 20
+Population - 5000
+
+I used these values as they produced the most accurate results. With regard to the
+stopping criteria this value was rarely reached as for the most part the most ideal
+value was found at the conclusion of the generations rather than being caught by this
+stopping criteria.
+
+Question 5:
+-----------
+(Using mean absolute error rather than mean squared error as it was more effective
+for my implementation)
+
+Random Seed 1 - Best Individual - 0.0395459 Population Average - 23.1937
+Random Seed 2 - Best Individual - 0.01826 Population Average - 9.32
+Random Seed 3 - Best Individual - 0.0337279 Population Average - 8.72009
+Random Seed 4 - Best Individual - 0.0207886 Population Average - 12.501
+Random Seed 5 - Best Individual - 0.0227236 Population Average - 13.9098
+Random Seed 6 - Best Individual - 0.0235021 Population Average - 13.5246
+Random Seed 7 - Best Individual - 0.00815131 Population Average - 6.95463
+Random Seed 8 - Best Individual - 0.0476616 Population Average - 9.95163
+Random Seed 9 - Best Individual - 0.00887092 Population Average - 12.9805
+Random Seed 10 - Best Individual - 0.00784096 Population Average - 7.14897
+
+Question 6:
+-----------
+Basing this off the best individual performance:
+
+1st - Fitness: 0.00784096 - Program: sub(add(add(X0, X0), add(div(-0.764, -0.894),
+mul(X0, X0))), sub(sub(add(-0.118, -0.682), add(0.875, X0)), add(div(-0.622, -0.423),
+div(mul(X0, X0), X0))))
+
+2nd - Fitness: 0.00815131 - Program: sub(add(add(add(sub(X0, -0.912), add(X0, 0.984)),
+add(X0, 0.984)), X0), sub(-0.942, sub(mul(X0, X0), -0.176)))
+
+3rd - Fitness: 0.00887092 - Program: mul(add(sub(X0, -0.734), sub(0.213, -0.996)),
+sub(add(X0, 0.580), add(-0.744, -0.734)))
+
+Cleanest Solution - Fitness: 0.0395459 - Program: add(mul(X0, X0), div(sub(X0, -0.999), 0.249))
+
+
+
+
+
+PART 4:
+Question 1:
+-----------
+V1, V2, V3,..., V36 (All input variables)
+
+Question 2:
+-----------
+add, subtract, multiply, divide
+
+Question 3:
+-----------
+The fitness function that was determined within gplearn provided excellent results
+by default so adjustment of the function was not necessary. The process they use to
+calculate there fitness function is with "mean absolute error" using this code:
+
+    np.average(np.abs(y_pred - y), weights=w)
+
+where it takes the average out of: the absolute value of the predicted y value and
+the y value, and the calculated weights.
+
+Question 4:
+-----------
+Population Size - 500
+Generations - 10
+Stopping Criteria - 0.01
+
+Question 5:
+-----------
+When creating my test and training data sets I randomly shuffled the original data set
+and then evenly split it in half, with one half going into training.txt and the other
+going into test.txt
+
+Question 6:
+-----------
+(0.9 + 0.8774122807017544 + 0.9114035087719298 + 0.9524122807017544 + 0.9524122807017544 +
+0.9065789473684212 + 0.9070175438596492 + 0.9065789473684212 + 0.9065789473684212 +
+0.8774122807017544) / 10
+
+ = 0.9098 = 90.98% Accuracy Rate
+
+Question 7:
+-----------
+Best 3 Overall:
+Random Seed 3 - 0.9524122807017544 div(V18, V8)
+Random Seed 4 - 0.9524122807017544 div(V18, V8)
+Random Seed 2 - 0.9114035087719298 sub(sub(div(V22, V8), div(sub(V8, V22), V22)), div(sub(V7, V22), V22))
+
+Best 3 Unique:
+Random Seed 3 - 0.9524122807017544 div(V18, V8)
+Random Seed 2 - 0.9114035087719298 sub(sub(div(V22, V8), div(sub(V8, V22), V22)), div(sub(V7, V22), V22))
+Random Seed 6 - 0.9070175438596492 mul(div(V22, V36), div(V30, V31))
